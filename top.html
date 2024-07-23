@@ -1,0 +1,42 @@
+<html>
+  <style>
+    body{
+      display: flex;
+      background-image: linear-gradient(black,grey);
+    }
+    h1{
+      font-size: 90px;
+      background: linear-gradient(to right, white,grey);
+      text-shadow: 4px 4px 10px rgb(0, 228, 245);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: glow 1.5s infinite alternate, slideIn 2s;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 4px 4px 10px rgb(0, 228, 245), 0 0 20px rgb(0, 228, 245), 0 0 30px rgb(0, 228, 245), 0 0 40px rgb(0, 228, 245);
+      }
+      to {
+        text-shadow: 4px 4px 20px rgb(0, 228, 245), 0 0 30px rgb(0, 228, 245), 0 0 40px rgb(0, 228, 245), 0 0 50px rgb(0, 228, 245);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    img{
+      width:350px;
+      height: 240px;
+    }
+  </style>
+  <body>
+    <img src="logo-removebg-preview.png">
+    <h1>Tourni House</h1>
+  </body>
+</html>

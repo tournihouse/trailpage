@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo-removebg-preview.png" type="x-icon">
+    <title>Free Fire Tournament Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            overflow-y: scroll; 
+            overflow-x: scroll;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20246/f12ac65d0a2883b63639842a817c47b7.jpg');
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-top: 3%;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 2%;
+            animation: neon 1.5s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 0, 0.4), 0 0 40px rgba(255, 0, 0, 0.2);
+            -webkit-text-stroke: 1px black;
+            color: #ff6600;
+        }
+
+        @keyframes neon {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.2);
+                color: #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 0, 0, 0.6), 0 0 50px rgba(255, 0, 0, 0.4);
+                color: #ff6600;
+            }
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: fadeIn 2s;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .player-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
+            animation: fadeIn 2s;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        label {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffcc00;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        input[type="submit"] {
+            background: #ffcc00;
+            color: #000;
+            border: none;
+            margin-top: 10px;
+            padding: 20px 40px;
+            font-size: 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff9900;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6600;
+            animation: slideIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        .icons {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .phone-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .phone-group img {
+            margin: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .player-group {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .logo {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .icons {
+                width: 70px;
+                height: 70px;
+            }
+
+            input[type="submit"] {
+                padding: 15px 30px;
+                font-size: 20px;
+                width: 80%;
+            }
+
+            .phone-group {
+                flex-direction: column;
+            }
+
+            .phone-group img {
+                margin: 10px 0;
+            }
+        }
+
+        .heading {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6600;
+            animation: slideIn 2s forwards;
+            text-align: center;
+        }
+
+        #popup-window {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            background: rgb(0, 0, 0);
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            margin: auto;
+            text-align: left;
+            display: none;
+            overflow-y: auto;
+        } 
+
+        .rules {
+            font-size: 28px;
+        }
+
+        .rules-content {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .payment {
+            font-size: 20px;
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+
+        .rules-content p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        marquee {
+            font-size: 24px;
+            color: #ffcc00;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+            animation: marqueeColorChange 3s infinite alternate;
+        }
+
+        @keyframes marqueeColorChange {
+            0% {
+                color: #ffcc00;
+            }
+            50% {
+                color: #ff6600;
+            }
+            100% {
+                color: #ff3300;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <h1>Free Fire Tournament Registration</h1>
+    <marquee>Every group matches will start at 7:30PM on your selected date. Playoff will be on 21st June at 7:30PM.</marquee>
+    <form method="post" name="register-form" action="https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec">
+        <div class="container">
+            <div class="player-group">
+                <h3>Player 1</h3>
+                <div class="form-group">
+                    <label for="player1">Name:</label>
+                    <input type="text" id="player1" name="player1" placeholder="Eg:Ajay" required>
+                    <label for="player1id">FF ID:</label>
+                    <input type="text" id="player1id" name="player1id" placeholder="Eg:34215678" required >
+                </div>
+            </div>
+            <div class="player-group">
+                <h3>Player 2</h3>
+                <div class="form-group">
+                    <label for="player2">Name:</label>
+                    <input type="text" id="player2" name="player2" placeholder="Eg:Daya" required>
+                    <label for="player2id">FF ID:</label>
+                    <input type="text" id="player2id" name="player2id" placeholder="Eg:54892312" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Eg:7036275516" required>
+                </div>
+            </div>
+            <div class="player-group">
+                <div class="form-group">
+                    <label for="slot">Select Slot:</label>
+                    <select id="slot" name="slot" required>
+                        <option value="" disabled selected>Select Slot</option>
+                        <option value="RP" style="color: rgb(255, 0, 0);">17th June(Red Pills)</option>
+                        <option value="BP" style="color: rgb(0, 38, 255);">18th June(Blue Pills)</option>
+                        <option value="PP" style="color: rgb(212, 0, 255);">19th June(Purple Pills)</option>
+                        <option value="GP" style="color: rgb(51, 255, 0);">20th June(Green Pills)</option>
+                    </select>
+                    <p class="payment">Complete the Payment of Entry Fee Rs.80 to <span style="font-size: 30px; color: #ff6600;"><b>9704223947</b></span> & Enter the Transaction ID.</p>
+                    <label for="transactionid">Transaction ID:</label>
+                    <input type="text" id="transactionid" name="transactionid" placeholder="Eg:T2407131420116280237144" required>
+                </div>
+            </div>
+            <img class="logo" src="logo-removebg-preview.png">
+            <div class="phone-group">
+                <a href="https://youtube.com/@tournihouse?si=NwAIEVzN5u_5Vsgz"><img class="icons" src="youtube.webp"></a>&ensp;&ensp;&ensp;&ensp;
+                <a href="https://www.instagram.com/tournihouse?igsh=MWI5aHZ4cmN2Ynd0Yw=="><img class="icons" src="Instagram.png"></a>
+            </div>
+        </div>
+        <a href="#" id="popup-link" style="font-size: larger; color: #ff6600;">Click here to open the rules</a>
+        <div id="popup-window">
+            <h1 class="heading">RULES</h1>
+            <div class="rules-content">
+                <p>Hello guys, thank you for registering for the Duo League.<br>
+
+                Here are some of the rules and processes for conducting a match:<br>
+                ➡ Gun Attributes - No<br>
+                ➡ Loadout - No<br>
+                ➡ No restrictions on wall breaking and camping <br>
+                ➡ Climbing upstairs in buildings and houses - No<br>
+                ➡ All other room match options will be included (Character Skill- No, Limited Ammo-No, etc.)<br>
+                ➡ Total Rounds - 11<br>
+                Winning Objective - 6<br>
+                ➡ STORE - Random Store
+                (If any gun has to be included, remind us before starting the match)<br>
+                ➡ Vest lvl - 3, Helmet lvl - 2<br>
+                ➡ Map - Bermuda<br><br>
+                
+                ‼‼ <b>NOTE</b>: If the gaming of the player looks suspicious, that player and their teammate will be disqualified. ‼‼.</p>
+            </div>
+            <button id="close-button">Close</button>
+        </div><br>
+        <br><input type="checkbox" class="rules" name="rules" style="width: 40px; height: 20px;"><label style="font-size: larger; color: antiquewhite;" required>I have read the rules.</label><br><br>
+        <input type="submit" value="Register">
+    </form>
+    <audio autoplay loop>
+        <source src="free_fire.mp3" type="audio/mp3">
+    </audio>
+</body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxnY5QT-mgDr-F9nq-BRZjggfMj94I_Tif-Qv8NjB-w1FLDN04gHjEhr6iM917Ma_7vZA/exec'
+    const form = document.forms['register-form']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you! your duo is registered for tournament successfully." ))
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+    });
+
+    var popupLink = document.getElementById("popup-link");
+    var popupWindow = document.getElementById("popup-window");
+    var closeButton = document.getElementById("close-button");
+
+    // Show the pop-up window when the link is clicked
+    popupLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        popupWindow.style.display = "block";
+    });
+
+    // Hide the pop-up window when the close button is clicked
+    closeButton.addEventListener("click", function() {
+        popupWindow.style.display = "none";
+    });
+</script>
+</html>
